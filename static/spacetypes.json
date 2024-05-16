@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Bookable Office",
+    "type": "bookable_office",
+    "definition": "Definition: an enclosed space that can be used by approximately 1-3 people.",
+    "commentary": "There was a general consensus that the need for these smaller enclosed rooms has increased. With more companies having open-plan layouts, these rooms are commonly used by individuals for Zoom calls or by small teams for collaboration and privacy.\\nSeveral participants commented that private, assigned offices have been almost completely eliminated in favor of the bookable offices.",
+    "keywords": "",
+    "increase": 5
+  },
+  {
+    "title": "Open Desking",
+    "type": "benching",
+    "definition": "Definition: desks, typically with monitors, that are placed in rows facing each other.",
+    "commentary": "Everyone seemed to agree that this type of space is going to stay. However, many noted that the amount of space allocated to it will shrink. This is being done either by reducing the number of desks or by “benching,” which often means putting people into tighter spaces sitting parallel with each other.",
+    "keywords": "Keywords/phrases: “hoteling,” “bench-ville,” “height adjustable desks,” “general open workspace,” “formal space,” “workstations,” “individual spaces”",
+    "decrease": 6
+  },
+  {
+    "title": "Informal Spaces",
+    "type": "informal",
+    "definition": "Definition: unenclosed space designed to facilitate collaboration with flexible seating and work styles",
+    "commentary": "As employees spend more of their focused work time at home, there is a greater emphasis for facilitating collaboration for those that choose to come into the office. Although these types of spaces existed before, companies are being more purposeful about the design of these spaces with the increase of hybrid work modes.",
+    "keywords": "Keywords/phrases: “clubhouses,” “collaborative,” “meeting in an informal way,” “social spaces”",
+    "increase": 5
+  },
+  {
+    "title": "Amenities",
+    "type": "amenities",
+    "definition": "Definition: any space type that is more than the minimum requirements to facilitate work ",
+    "commentary": "In an effort to bring people back into the office, companies are improving their in-office amenities and hospitality experience. There is some disagreement about whether this approach is effective for bringing people back, but most agree that amenities are generally increasing. The exception was a participant who noted that some companies are decreasing their amenity spaces if they are in a Class A building that offers them to their tenants.",
+    "keywords": "Keywords/phrases: “cafeteria,” “fitness,” “hospitality,” “experience-drivers,” “marketing events,” “wellness rooms”",
+    "increase": 5,
+    "decrease": 1
+  },
+  {
+    "title": "Open Collaboration",
+    "type": "open_collab",
+    "definition": "Definition: similar to Open Collaboration, this type of space has a variety of seating types for meeting or working in an informal way (think WeWork)",
+    "commentary": "Although many experts referred to informal spaces in the same sentence as collaboration space, the emphasis here is more on the ability to every kind of work in these areas, from answering emails to sharing a cup of coffee with a coworker. Informal spaces can draw people in for the times in between meetings to take care of quick tasks, instead of getting all set up and tethered to a formal desk.",
+    "keywords": "Keywords/phrases: “workplace lounges,” “touchdown seats,” “informal seating area,” “better break areas”",
+    "increase": 6
+  }
+]

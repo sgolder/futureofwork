@@ -1,0 +1,138 @@
+body {
+  background-color: #BCD8E2;
+}
+
+div {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+h1 {
+  color: #07668e;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-family: Merriweather, serif;
+  font-size: 50;
+}
+
+h2 {
+  color: #07668e;
+  font-family: Merriweather, serif;
+  margin-top: 70px;
+}
+
+h3 {
+  color: #07668e;
+  text-align: center;
+  width: 55ch;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+}
+
+h4 {
+  color: #2d363a;
+}
+
+p {
+  color: #2d363a;
+  font-family: Montserrat, sans-serif;
+  width: 70ch;
+  line-height: 30px;
+}
+
+hr {
+  color: #DD9770;
+  width: 50px;
+  size: 3px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card h3 {
+  width: 20ch;
+}
+
+#opp_chal_svg text {
+  font-family: Montserrat, sans-serif;
+  font-size: 12;
+}
+
+div #office_div {
+  flex-flow: row;
+}
+
+div #buttons_div {
+  flex-flow: row;
+}
+
+button {
+  width: 250;
+  height: 50;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  padding-left: 20pt;
+  padding-right: 20pt;
+  margin-right: 20pt;
+  margin-top: 5pt;
+  margin-bottom: 10pt;
+  border-radius: 24px;
+  align-content: center;
+  font-family: Montserrat, sans-serif;
+  background-color: #BCD8E2;
+  border-width: 5;
+}
+button:hover {
+  background: #c9e2eb;
+}
+
+#ownerButton {
+  border-color: #2A83A9;
+}
+
+#occupierButton {
+  border-color: #DD9770;
+}
+
+#employeeButton {
+  border-color: #72851E;
+}
+
+#panel h1 {
+  width: 100%;
+  text-align: left;
+}
+
+#panel p {
+  width: 50ch;
+  margin-left: 50px;
+  margin-top: 0px;
+}
+
+#panel svg {
+  margin-bottom: 0px;
+}
+
+#boulder text{
+  fill: #e5f0f5;
+  font-family: Montserrat, sans-serif;
+}
+
+.labels {
+  user-select: none;
+}
+
+.key {
+  user-select: none;
+}
+
+
+svg .quoteRect {
+  filter: drop-shadow(drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))) ;
+} 

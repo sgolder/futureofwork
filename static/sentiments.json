@@ -1,0 +1,132 @@
+[
+  {
+    "party": "owners",
+    "sentiment": "positive",
+    "title": "Cheap Buildings",
+    "quotes": [
+      "So you're just gonna see lots of buildings being sold for pennies on the dollar bought by new ownership… then because they bought it for a third of what the previous owners did will invest more money into the building and then attract new tenants",
+      "The main benefit is going to be for the people that can just snap up the buildings cheap and then hopefully leasing will start back up."
+    ]
+  },
+  {
+    "party": "owners",
+    "sentiment": "negative",
+    "title": "Vacancy",
+    "quotes": [
+      "Office vacancy is pretty high right now. And even though you're able to get rid of that the like space excess space, you might not be able to depending on the market, so there's that market condition is something like that's less controllable.",
+      "A lot of these older buildings still carry a lot of loans and a lot of them are not doing well, because the rosters are not doing well."
+    ]
+  },
+  {
+    "party": "owners",
+    "sentiment": "positive",
+    "title": "Flight to Quality",
+    "quotes": [
+      "The like A-plus, trophy class, buildings are not having any trouble leasing",
+      "...like healthy, great amenities. Even the clients don't even have to build their own amenity because it has it within the tenant space. And these are what people are gravitating towards.",
+      "I think that flight to quality is still what people are looking for. It can be an attractive retaining tool for them."
+    ]
+  },
+  {
+    "party": "owners",
+    "sentiment": "negative",
+    "title": "Struggling Class A",
+    "quotes": [
+      "There's a lot of these like struggling Class A towers that are now like have to flip exactly like all of these improvements to attract these tenants",
+      "The Class A classification could be a 35 year old building with marble and orange and gold leaf, which is not necessarily  what would attract people.",
+      "Buildings have a lot of supply and I think that is going to push some of [them] to upgrade, whether they're upgrading their lobby [or] they're adding amenities.  They're doing turnkey solutions."
+    ]
+  },
+  {
+    "party": "owners",
+    "sentiment": "both",
+    "title": "Turnkey Solutions",
+    "quotes": [
+      "Say a floor is empty, okay? And it had really old furniture and it looked terrible and it  needed just to be wiped clean. They will do the demo. Put a speculative office environment. And it gets, depending on the size, it gets some smaller tenants go 'Wow, this is perfect. Let me just move in.'",
+      "The landlord now has to be smart, right? Keep like upgrading and thinking about those type of expectations.",
+      "Buildings have a lot of supply and I think that is going to push some of [them] to upgrade, whether they're upgrading their lobby [or] they're adding amenities.  They're doing turnkey solutions."
+     ]
+  },
+  {
+    "party": "owners",
+    "sentiment": "negative",
+    "title": "Bank Loans",
+    "quotes": [
+      "A lot of these older buildings still carry a lot of loans and a lot of them are not doing well, because the rosters are not doing well. Building valuation has dropped significantly.",
+      "However, if I have short term leases, and a lot of them, and I don't have a diverse talent, a diverse client base in my building, the bank isn't gonna look as favorably on that.",
+      "The bank also, if you have a million square foot building, wants to know that you have a million square feet of revenue generating space, right?",
+      "If they're already underwater on the debt for their building, then they don't see any value in providing money to the tenants that they're still going to be underwater."
+     ]
+  },
+  {
+    "party": "occupier",
+    "sentiment": "negative",
+    "title": "Uncertain Future",
+    "quotes": [
+      "There are tenants out there that are either need space or want to downsize but just can't or don't want to because of the uncertainty.",
+      "Historically, you took enough space that would last you five years, and you can predict what you'd need in five years. And you might negotiate for options in that fifth year to take more to get rid of and so forth. Clients can't figure out what five years is going to be they have no idea.",
+      "And so the unknowingness of the future is making it really hard because it's also not a fast cycle."
+     ]
+  },
+  {
+    "party": "occupier",
+    "sentiment": "positive",
+    "title": "Vacancy",
+    "quotes": [
+      "There's more space than there is demand. So there are buildings that are saying, I'll take the bird in hand. I'll take that three-year lease.",
+      "Most cities centers...have a lot of vacancy and a lot of sublease opportunities so have been an opportunity for tenants to demand more free rent or more money for tenant improvements or the ability to make decisions early on their lease expiration date."
+     ]
+  },
+  {
+    "party": "occupier",
+    "sentiment": "both",
+    "title": "Flexible Leases",
+    "quotes": [
+      "I think we need to start thinking about more flexible contracts in real estate and I know there's a risk from the landlord side but maybe this needs to be integrated into the negotiation phase",
+      "If [landlords] can be more flexible, we can give them more business, right?",
+      "We don't have a lot of flexible space that that you can do like short term time in… The expense of it is just ridiculous.",
+      "But if I have flexibility from the landlord side, that would definitely shift the way that I do business. I can be I can take more risks because I know that I can push back if needed."
+     ]
+  },
+  {
+    "party": "occupier",
+    "sentiment": "both",
+    "title": "Tenant Improvements",
+    "quotes": [
+      "A lot of these new buildings, there's a lot of  lease structuring that are happening, as well, where the landlord would take part with the risk. So you pay higher rent every year, but the the landlord will fund you to help you build.",
+      "Building valuation has dropped significantly. So I think like a lot of these aging building cannot offer TI, tenant improvements, either.",
+      "Building owners aren't providing the tenant improvement allowances that they used to, because if they're already underwater on the debt for their building.",
+      "… a lot of sublease opportunities which right now, maybe for the last year or so, have been an opportunity for tenants to demand more free rent or more money for tenant improvements."
+     ]
+  },
+  {
+    "party": "occupier",
+    "sentiment": "negative",
+    "title": "On the Same Page",
+    "quotes": [
+      "I think the biggest challenge is getting people on board with like, reducing the square footage and optimizing the square footage.",
+      "We see that our global partners, they are not ready to provide the level of service that we are aiming but that's a big challenge",
+      "How do you come in and do 10% of the building while the rest of it stays the same? And how do you as amenities change and our services? … That's probably the toughest part is trying to deliver a new, consistent experience for all associates.",
+      "Now it's really requiring leaders to be more involved or to have a perspective that gives the other departments permission to do the right thing and to do an innovative thing."
+     ]
+  },
+  {
+    "party": "employee",
+    "sentiment": "positive",
+    "title": "Intentional Design",
+    "quotes": [
+      "It's an opportunity to think about what actually feels good and to create spaces that people want to be in or that can actually do their job in.",
+      "There's kind of new ways for us to interact with the workplace and the office.",
+      "Can you make those core sites experience much more amazing? Because people are not coming to the office that's just vanilla.",
+      "That was really where we turn the corner and talking about experience. More than just design experience being a more holistic thing around amenities and how like we built an entire hospitality army right to give that personal touch"
+     ]
+  },
+  {
+    "party": "employee",
+    "sentiment": "negative",
+    "title": "Forced to Return",
+    "quotes": [
+      "One of the most frustrating things is when people are like 'We have this space, and we need to prove that it's useful by forcing people to be there.'"
+     ]
+  }
+]

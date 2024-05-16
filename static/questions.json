@@ -1,0 +1,81 @@
+{
+  "count": 13,
+  "name": "Interview Questions",
+  "children": [
+    {
+      "count": 2,
+      "name": "Participant Background",
+      "children": [
+        {
+          "count": 1,
+          "name": "What is your current role at your organization?"
+        },
+        {
+          "count": 1,
+          "name": "How many years have you been in (corporate real estate, interior design, workplace management)?"
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "name": "Long-term Impacts for Organizations",
+      "children": [
+        {
+          "count": 1,
+          "name": "From your perspective, what are the key predictions for the future of the workplace in the next 5-10 years?"
+        },
+        {
+          "count": 1,
+          "name": "Are companies motivated to bring people back into the office? If so, what are their motivations?"
+        },
+        {
+          "count": 1,
+          "name": "How are companies optimizing their physical office spaces for collaboration and productivity?"
+        },
+        {
+          "count": 1,
+          "name": "What does it look like for organizational leadership to measure the long-term impacts of in-person interactions in the physical workplace?"
+        }
+      ]
+    },
+    {
+      "count": 5,
+      "name": "Impacts on Real Estate and Workforces",
+      "children": [
+        {
+          "count": 1,
+          "name": "What challenges and opportunities does corporate eladership foresee in navigating the evolving landscape of workplace design and corporate real estate?"
+        },
+        {
+          "count": 1,
+          "name": "How do you view the distribution of work across the city? (Home, work, 3rd places?)"
+        },
+        {
+          "count": 1,
+          "name": "In the hybrid model, how are companies deciding on the locations of their physical offices?"
+        },
+        {
+          "count": 1,
+          "name": "How would you characterize the future of office layouts?"
+        },
+        {
+          "count": 1,
+          "name": "How are companies gathering and incorporating employee feedback into the decision-making process for workplace design?"
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "name": "Future of Technology",
+      "children": [
+        {
+          "count": 1,
+          "name": "How are advancements in technology influencing the design of the modern workplace?"
+        },
+        {
+          "count": 1,
+          "name": "Do you thinkthe growing adoption across multiple domains will influence the employees' experience with the workplace?"
+        }
+      ]
+    }]
+}

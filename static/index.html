@@ -1,0 +1,524 @@
+<html><head>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-flextree@2.0.0/build/d3-flextree.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div>
+    <h1>The Future of Work</h1>
+    <h3>The Perspectives of Industry Leaders in Workplace Management, Design, and Real Estate</h3>
+    <hr color="#DD9770">
+    <h3>By Sarah Springer</h3>
+  </div>
+  <div>
+    <p>The pervasiveness of hybrid work modes are calling the future of the office into question. Employees and CEOs alike are asking whether the in-office experience adds real value their companies - or if offices are even necessary. In this study, I sought out expert predictions about the future of the office.</p>
+  </div>
+  <div>
+    <h2>Research Methodology</h2>
+    <p>A qualitative approach was utilized to understand the ramifications of these events for the workplace. Although valuable research was conducted in the years preceding the current study, the rapid and pervasive adoption of hybrid models began an era of work about which previous literature has scarcely addressed. This radical change requires a return to exploratory research without preconceptions.</p>
+    <p>I began by reaching out to professionals in workplace management, corporate interior design, and corporate real estate. Nine industry-leaders in Boston, New York, and Washington D.C. participated 45-minute, semi-structured interviews.</p>
+    <div class="card">
+      <div>
+        <h1>9</h1>
+        <h3>Semi-structured interviews</h3>
+      </div>
+      <div>
+        <h1>4</h1>
+        <h3>Areas of expertise</h3>
+      </div>
+      <div>
+        <h1>197</h1>
+        <h3>Combined years of experience</h3>
+      </div>
+    </div>
+    <p>The interview was divided into 4 sections, with a total of 13 questions. To explore the questions that were asked, click on the topic nodes below:</p>
+    <h3>Interview Questions by Group</h3>
+    <svg id="tree" width="1400" height="1000"></svg>
+    <p>After the interviews were completed, the recording and transcripts were analyzed using a thematic analysis approach. Thematic analysis has been described as &#x0022 a method for identifying, analyzing and reporting patterns (themes) within data&#x0022 (Braun & Clarke, 2006).</p>
+  </div>
+  <div>
+    <h2>Results</h2>
+    <p>There was a strong consensus among interviewees that we will continue to use offices in the future, but they will look very different than they do today. Three broad themes emerged from the analysis: a continuing battle between management and labor, predictions about the future of office interiors, and choosing the right location for the office.</p>
+    <div display="flex" width="100%">
+      <svg id="boulder" width="1500" height="1000">
+        <image href="Boulder Faded Bottom.png" width="1500" height="1200""></image>
+        <text x="475" y="430">"We were trying to convince them to let people work at home</text>\
+        <text x="500" y="480">part of the time because then they would give up seats.</text>
+        <text x="200" y="550" font-weight="600" font-size="25">Hit the pandemic and now all of a sudden, that boulder we were pushing up hill...</text>
+        <text x="505" y="600" font-weight="600" font-size="25">is chasing us down the other side</text>
+        <text x="570" y="670">Why does anyone need to come in?"</text>
+      </svg>
+    </div>
+    <p>When asked whether companies are motivated to bring their employees back into the office in some capacity, every participant said yes. However, there seems to be a divide concerning what those motivations are.</p>
+    <p>Some companies want their employees back because they believe it adds unique value to the collaboration efforts and overall culture of the organization. Others appear to being falling back to an old-school mentality of management in which it is believed an employee is not working unless they can be seen sitting at their desk.</p>
+    
+    <h3>Predictions by Space Type</h3>
+    <p>industry-leaders indicated that the types and ratios of spaces in the office will change in the coming 5-10 years. Hover over a space type to see what experts are saying:</p>
+    <div id="office_div">
+      <div>
+        <svg id="office_svg" width="700" height="700" ></svg>
+      </div>
+      <div id="panel" width="300"> 
+      </div>
+    </div>
+
+    <h3>Challenges and Opportunities</h3>
+    <p>The following section displays common themes in interviewees&#x201B answers to the following question:</p>
+    <p>&#x0022What challenges and opportunities does corporate eladership foresee in navigating the evolving landscape of workplace design and corporate real estate?&#x0022</p>
+    <p>Hover over each circle to see relevant quotes from the interviews:</p>
+    <div> 
+      <svg id="opp_chal_svg" width="1200" height="900" background-color="#DD9770"></svg>
+    </div>
+
+    <h2>Closing Thoughts</h2>
+    <p>The findings in this article are not meant to be prescriptive. Instead, the findings are intended to start a conversation about how businesses can make decisions about their future offices.</p>
+    <hr color="#DD9770">
+    <h3>Want to read the full thesis? Email me at sgolderspringer[at]gmail.com</h3>
+    <hr color="#DD9770">
+    <p>&nbsp<p>
+  </div>
+  
+
+  <script>
+    const addSentiments = async() => {
+      let data = await d3.json("sentiments.json")
+
+      console.log(data)
+      
+      let svg = d3.select("#opp_chal_svg")
+      let width = svg.attr("width")
+      let height = svg.attr("height") 
+      let circleWidth = 75
+
+      //Assign colors
+      data.forEach( d=> {
+        d.x = width / 2
+        d.y = height / 2
+        if(d.sentiment == "positive") {
+          d.color = "#edfaff"
+          d.textColor = "#2d363a"
+        }
+        if(d.sentiment == "negative") {
+          d.color = "#0b2b38"
+          d.textColor = "white"
+        }
+        if(d.sentiment == "both") {
+          d.color = "grey"
+        }
+
+        if(d.party == "owners") {
+          d.stroke = "#2A83A9"
+        }
+        if(d.party == "occupier") {
+          d.stroke = "#DD9770"
+        }
+        if(d.party == "employee") {
+          d.stroke = "#72851E"
+        }
+
+      })
+
+      //Create bubbles with text inside
+      let bubbles = svg.selectAll("g").data(data).join("g")
+        bubbles.append("circle")
+              .attr("class", "bubbles")
+              .attr("r", circleWidth)
+              .attr("cx", d => d.x)
+              .attr("cy", d => d.y)
+              .attr("fill", d => d.color)
+              .attr("stroke", d => d.stroke)
+              .attr("stroke-width", 8)
+        bubbles.append("text")
+            .attr("class", "labels")
+            .attr("x", "50%")
+            .attr("y", "50%")
+            .attr("text-anchor", "middle")
+            .attr("fill", d => d.textColor)
+            .text(d => d.title) 
+
+      //Force simulation for sentiment bubbles
+      let sentSim = d3.forceSimulation()
+                      .nodes(data)
+                      .force("ypos", d3.forceY()
+                                        .strength(0.05)
+                                        .y( d => d.y))
+                      .force("xpos", d3.forceX()
+                                        .strength(0.05)
+                                        .x( d => d.x))
+                      .force("collision", d3.forceCollide()
+                                            .radius(80)
+                                            .iterations(2))
+                      .on("tick", updateSent);
+      
+      function updateSent() {
+        d3.selectAll(".bubbles").attr("cx", d => d.x).attr("cy", d => d.y)
+        d3.selectAll(".labels").attr("x", d => d.x).attr("y", d => d.y)
+      }
+      sentSim.restart()
+      
+      //6 possible positions for quote boxes around the bubbles
+      let boxPositions = [
+          {xChange: -100, yChange: -320},
+          {xChange: 120, yChange: -220 },
+          {xChange: 120, yChange:  20},
+          {xChange: -100, yChange: 120 },
+          {xChange: -320, yChange:  20},
+          {xChange: -320, yChange: -220 }
+        ]
+
+      //Sentiment Colors Key
+      svg.append("text").attr("class", "key")
+                        .attr("x", 20)
+                        .attr("y", 150)
+                        .attr("font-size", 20)
+                        .text("Key:")
+      svg.append("rect").attr("class", "key")
+                        .attr("width", 145)
+                        .attr("height", 30)
+                        .attr("x", 10)
+                        .attr("y", 180)
+                        .attr("rx", 20)
+                        .attr("fill", "#edfaff")
+      svg.append("text").attr("class", "key")
+                        .attr("x", 20)
+                        .attr("y", 200)
+                        .text("Positive Sentiment")
+      svg.append("rect").attr("class", "key")
+                        .attr("width", 135)
+                        .attr("height", 30)
+                        .attr("x", 10)
+                        .attr("y", 230)
+                        .attr("rx", 20)
+                        .attr("fill", "grey")
+      svg.append("text").attr("class", "key")
+                        .attr("x", 20)
+                        .attr("y", 250)
+                        .text("Mixed Sentiment")
+      svg.append("rect").attr("class", "key")
+                        .attr("width", 150)
+                        .attr("height", 30)
+                        .attr("x", 10)
+                        .attr("y", 280)
+                        .attr("rx", 20)
+                        .attr("fill", "#0b2b38")
+      svg.append("text").attr("class", "key")
+                        .attr("x", 20)
+                        .attr("y", 300)
+                        .attr("fill", "white")
+                        .text("Negative Sentiment")
+      
+      //Categories Color Key
+      svg.append("rect").attr("id", "ownerButton")
+                        .attr("width", 200)
+                        .attr("height", 30)
+                        .attr("x", 10)
+                        .attr("y", 380)
+                        .attr("rx", 20)
+                        .attr("fill", "none")
+                        .attr("stroke", "#2A83A9")
+                        .attr("stroke-width", 5)
+      svg.append("text").attr("class", "key")
+                        .attr("x", 20)
+                        .attr("y", 400)
+                        .attr("fill", "black")
+                        .text("Building Owners / Landlords")
+      svg.append("rect").attr("id", "occupierButton")
+                        .attr("width", 160)
+                        .attr("height", 30)
+                        .attr("x", 10)
+                        .attr("y", 430)
+                        .attr("rx", 20)
+                        .attr("fill", "none")
+                        .attr("stroke", "#DD9770")
+                        .attr("stroke-width", 5)
+      svg.append("text").attr("class", "key")
+                        .attr("x", 20)
+                        .attr("y", 450)
+                        .attr("fill", "black")
+                        .text("Businesses / Occupiers")
+      svg.append("rect").attr("id", "employeeButton")
+                        .attr("width", 90)
+                        .attr("height", 30)
+                        .attr("x", 10)
+                        .attr("y", 480)
+                        .attr("rx", 20)
+                        .attr("fill", "none")
+                        .attr("stroke", "#72851E")
+                        .attr("stroke-width", 5)
+      svg.append("text").attr("class", "key")
+                        .attr("x", 20)
+                        .attr("y", 500)
+                        .attr("fill", "black")
+                        .text("Employees")
+
+      //Add interactions
+      d3.selectAll(".bubbles").on("mouseover", function() {
+        //Mute everything but the focus
+        data = d3.select(this).datum()
+        d3.selectAll(".bubbles").attr("opacity", 0.2)
+        d3.selectAll(".labels").attr("opacity", 0.2)
+        d3.select(this.nextSibling).attr("opacity",1)
+        d3.select(this)
+          .attr("fill", data.stroke)
+          .attr("stroke", data.color)
+          .attr("opacity", 1)
+
+        quotes = data.quotes
+        cx = Number(d3.select(this).attr("cx"))
+        cy = Number(d3.select(this).attr("cy"))
+        let positions = []
+
+        //Set quote box positions based on bubble location
+        if(cx > width/2 && cy > height/2) { positions = [boxPositions[5], boxPositions[0], boxPositions[1], boxPositions[4]]} //quadrant = 1
+        if(cx > width/2 && cy < height/2) { positions = [boxPositions[4], boxPositions[3], boxPositions[2], boxPositions[5]]} //quadrant = 2 
+        if(cx < width/2 && cy > height/2) { positions = [boxPositions[1], boxPositions[0], boxPositions[5], boxPositions[2]]} //quadrant = 3
+        if(cx < width/2 && cy < height/2) { positions = [boxPositions[2], boxPositions[3], boxPositions[4], boxPositions[1]]} //quadrant = 4
+
+        generateQuoteBoxes(cx, cy, quotes, positions)
+      })
+
+      d3.selectAll(".bubbles").on("mouseout", function() {
+        data = d3.select(this).datum()
+        d3.selectAll(".bubbles").attr("opacity", 1)
+        d3.selectAll(".labels").attr("opacity", 1)
+        d3.select(this)
+          .attr("fill", data.color)
+          .attr("stroke", data.stroke)
+        
+        d3.selectAll(".quotes").remove()
+      })
+  
+    }
+
+    function generateQuoteBoxes(cx, cy, quotes, positions) {
+      let svg = d3.select("#opp_chal_svg")
+      let quoteBox = svg.selectAll(".quotes g").data(quotes).join("g").attr("class", "quotes")
+        quotes.forEach( (d, i) => {
+          width = 200
+          height = 200
+
+          quoteBox.append("rect").attr("class", "quoteRect")
+                                  .attr("width", width)
+                                  .attr("height", height)
+                                  .attr("x", cx + positions[i]["xChange"])
+                                  .attr("y", cy + positions[i]["yChange"])
+                                  .attr("rx", 20)
+                                  .attr("fill", "white")
+          quoteBox.append("text").attr("class", "quoteText")
+                                  .attr("x", cx + positions[i]["xChange"] +20)
+                                  .attr("y", cy + positions[i]["yChange"] + 30)
+                                  .attr("text-anchor", "left")
+                                  .attr("font-size", 14)
+                                  .text(d)
+                                  .call(wrap, width - 40, d)
+        })
+    }
+
+    //Text wrapping function 
+    function wrap(text, width) {
+    text.each(function () {
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1, // ems
+            x = text.attr("x"),
+            y = text.attr("y"),
+            dy = 0, 
+            tspan = text.text(null)
+                        .append("tspan")
+                        .attr("x", x)
+                        .attr("y", y)
+                        .attr("dy", dy + "em");
+        while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > width) {
+                line.pop();
+                tspan.text(line.join(" "));
+                line = [word];
+                tspan = text.append("tspan")
+                            .attr("x", x)
+                            .attr("y", y)
+                            .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                            .text(word);
+            }
+        }
+      })
+    }
+    addSentiments();
+
+    const addOfficeHover = async () => {
+
+      let data = await d3.json("spacetypes.json")
+      
+      const officeSvg = d3.select("#office_svg")
+
+      //Add image and circles
+      officeSvg.append("image").attr("width",700).attr("height", 700)
+                .attr("href", "Isometric Office.gif")
+      officeSvg.append("circle").attr("class", "dots").attr("id", "bookable_office").attr("cx", 120).attr("cy", 330).attr("r", 15).attr("fill", "#07668e").attr("stroke", "white").attr("stroke-width", 4)
+      officeSvg.append("circle").attr("class", "dots").attr("id", "benching").attr("cx", 340).attr("cy", 310).attr("r", 15).attr("fill", "#07668e").attr("stroke", "white").attr("stroke-width", 4)
+      officeSvg.append("circle").attr("class", "dots").attr("id", "informal").attr("cx", 370).attr("cy", 210).attr("r", 15).attr("fill", "#07668e").attr("stroke", "white").attr("stroke-width", 4)
+      officeSvg.append("circle").attr("class", "dots").attr("id", "amenities").attr("cx", 280).attr("cy", 420).attr("r", 15).attr("fill", "#07668e").attr("stroke", "white").attr("stroke-width", 4)
+      officeSvg.append("circle").attr("class", "dots").attr("id", "open_collab").attr("cx", 540).attr("cy", 350).attr("r", 15).attr("fill", "#07668e").attr("stroke", "white").attr("stroke-width", 4)
+      
+      
+      //Add interactions
+      d3.selectAll(".dots").on("mouseover", function() {
+        console.log(this)
+          d3.select(this)
+            .attr("opacity", 0.9)
+            .attr("stroke", "black")
+          
+          data.forEach( (d) => {
+              if(d.type == this.id) { fillPanel(d) }
+            });
+      })
+
+      d3.selectAll(".dots").on("mouseout", function() {
+          d3.select(this)
+            .attr("opacity", 1)
+            .attr("stroke", "white")
+      })
+
+    }
+    addOfficeHover();
+
+    //Add info to space types panel
+    const fillPanel = (dat) => {
+      let panel = d3.select("#panel")
+      panel.html(null)
+      console.log(dat)
+      panel.append("h2").text(dat.title)
+      panel.append("p").text(dat.definition)
+      panel.append("p").text(dat.commentary)
+      panel.append("p").text(dat.keywords)
+      panel.append("p").text("Number of participants predicting the increase or decrease in this space type:")
+      panel.append("svg").attr("id","inc_dec_svg").attr("width", 500).attr("height", 80)
+      let incDecSvg = d3.select("#inc_dec_svg")
+      if(dat.increase != null) {
+        for(i = 0; i<dat.increase; i++) {
+          incDecSvg.append("image").attr("width",50).attr("height", 50)
+                .attr("href", "Up Arrow.png").attr("x", i*40)
+        }
+      }
+      if(dat.decrease != null) {
+        for(i = 0; i<dat.decrease; i++) {
+          incDecSvg.append("image").attr("width",50).attr("height", 50)
+                .attr("href", "Down Arrow.png").attr("x", 250 + (i*40))
+        }
+      }
+    }
+
+    //Interview Questions Tree
+    const addTree = async () => {
+    
+    data = await d3.json("questions.json")
+    console.log(data)
+
+    let treeSvg = d3.select("svg#tree")
+    let width = treeSvg.attr("width")
+    let linkGroup = treeSvg.append("g").attr("class","links")
+    let nodeGroup = treeSvg.append("g").attr("class","nodes")
+    let root = d3.hierarchy(data)
+    let treeGen = d3.flextree();
+
+    //Create backups and set auto depth
+    root.descendants().forEach ( (d,i) => {
+      d.id = i;
+      d.backupChildren = d.children
+      if(d.depth > 0) { d.children = null}
+    })
+
+    let fontScale = d3.scaleLinear().domain([0, 3]).clamp(true).range([14,8]);
+
+    treeGen.nodeSize(node => {
+      let width = 260;
+      let height = fontScale(node.depth) + 40;
+      return[height,width]
+    })
+
+    let lineGen = d3.linkHorizontal().x(d => d.y).y(d => d.x)
+
+    //Update Tree Function
+    let updateTree = async function() {
+      let nodeDat = root.descendants();
+      let linkDat = root.links();
+      let tree = treeGen(root)
+      let top = root
+      let bottom = root
+      root.each( node => {
+        if (node.x < top.x) {top = node}
+        if (node.x > bottom.x) {bottom = node}
+      })
+
+      let height = bottom.x - top.x + 70
+      treeSvg.attr("height", height)
+      linkGroup.attr("transform",`translate(100,${-top.x+40})`)
+      nodeGroup.attr("transform",`translate(100,${-top.x+40})`)
+
+      // Generate nodes with text for each layer
+      let nodes = nodeGroup.selectAll("g.node").data(nodeDat, d => d.id)
+                            .join(
+                              enter => {
+                                let g = enter.append("g").attr("class","node")
+                                g.append("text").attr("class","node-label no-select")
+                                                .attr("x", 14)
+                                                .attr("text-anchor", "start")
+                                                .style("font-size", d => { scale = fontScale(d.depth); return `${scale}px`})
+                                                .attr("dy", d => fontScale(d.depth)/4 )
+                                                .attr("font-family", "Montserrat, sans-serif")
+                                                .text( d => d.data.name )
+                                g.append("circle").attr("r", 8)
+                                                  .attr("fill", "#DD9770")
+                                                  .attr("stroke", "#07668e")
+                                                  .attr("stroke-width", 2)
+                                g.attr("transform", d => `translate(${d.y},${d.x})`)
+                                g.style("cursor", d => d.backupChildren ? "pointer" : "auto")
+                                  .on("click", function(event, d) {
+                                    if (d.children) { d.children = null }
+                                    else { d.children = d.backupChildren }
+                                updateTree();
+                                });
+                              },
+                              update => {
+                                update.attr("transform", d => `translate(${d.y},${d.x})`)
+                              },
+                              exit => {
+                                exit.remove()
+                              }
+                            )
+      // Add links
+      let links = linkGroup.selectAll("path.link").data(linkDat, d => d.target.id)
+                         .join( 
+                           enter => {
+                             enter.append("path").attr("class","link")
+                                  .attr("fill","none")
+                                  .attr("stroke","#d7e9f0")
+                                  .attr("stroke-width",2)
+                                  .attr("d", lineGen )
+                           },
+                           update => {
+                             update.attr("d", lineGen )
+                           },
+                           exit => {
+                             exit.remove() 
+                           } );                      
+    }
+    updateTree();
+    }
+    addTree();
+
+    
+  </script>
+</body>
+</html>
